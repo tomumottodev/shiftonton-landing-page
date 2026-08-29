@@ -75,8 +75,8 @@ document
 const documentHead = `
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="シフト作成者の試行錯誤を支える伴走型AI、シフトパズルのモニター募集ページ" />
-  <title>シフトパズル｜納得の一枚をつくる伴走型AI</title>`;
+  <meta name="description" content="シフト作成者の試行錯誤を支える伴走型AI、シフトントンのモニター募集ページ" />
+  <title>シフトントン｜納得の一枚をつくる伴走型AI</title>`;
 
 const prettierOptions = {
   printWidth: 100,

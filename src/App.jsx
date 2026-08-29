@@ -10,7 +10,7 @@ const coral = "#ff5d64";
 const BASE_DESIGN_WIDTH = 724;
 
 function Button({ children, variant = "primary", href = "#entry", onClick, className = "" }) {
-  const base = "inline-flex h-[34px] items-center justify-center gap-2 rounded-full px-6 text-[11px] font-bold tracking-[.03em] transition focus:outline-none focus:ring-2 focus:ring-[#ff5d64]/35";
+  const base = "inline-flex whitespace-nowrap h-[34px] items-center justify-center gap-2 rounded-full px-6 text-[11px] font-bold tracking-[.03em] transition focus:outline-none focus:ring-2 focus:ring-[#ff5d64]/35";
   const styles = variant === "primary"
     ? "bg-[#ff5d64] text-white shadow-[0_8px_18px_rgba(255,93,100,.2)] hover:bg-[#ef4e56]"
     : "border border-[#cfd3d6] bg-white text-[#252a2d] hover:border-[#ff5d64] hover:text-[#ff5d64]";

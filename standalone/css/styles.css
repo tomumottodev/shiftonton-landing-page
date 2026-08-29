@@ -537,6 +537,9 @@
   .h-\[29px\] {
     height: 29px;
   }
+  .h-\[31px\] {
+    height: 31px;
+  }
   .h-\[34px\] {
     height: 34px;
   }
@@ -623,6 +626,9 @@
   }
   .w-\[220px\] {
     width: 220px;
+  }
+  .w-\[244px\] {
+    width: 244px;
   }
   .w-full {
     width: 100%;
@@ -984,6 +990,9 @@
   .py-\[17px\] {
     padding-block: 17px;
   }
+  .py-\[18px\] {
+    padding-block: 18px;
+  }
   .pt-\[3px\] {
     padding-top: 3px;
   }
@@ -1132,6 +1141,10 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .tracking-\[\.1em\] {
+    --tw-tracking: 0.1em;
+    letter-spacing: 0.1em;
   }
   .tracking-\[\.03em\] {
     --tw-tracking: 0.03em;

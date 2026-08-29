@@ -32,21 +32,6 @@ demoButton?.addEventListener("click", () => {
   scaleShell.appendChild(modal);
 });
 
-document.querySelector("form")?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!event.currentTarget.reportValidity()) return;
-
-  let message = event.currentTarget.querySelector("[data-success]");
-
-  if (!message) {
-    message = document.createElement("p");
-    message.dataset.success = "true";
-    message.className = "mt-2 text-center text-[9px] font-bold text-[#32a977]";
-    message.textContent = "ありがとうございます。応募を受け付けました。";
-    event.currentTarget.appendChild(message);
-  }
-});
-
 document
   .querySelector('button[aria-label="バナーを閉じる"]')
   ?.addEventListener("click", (event) => event.currentTarget.parentElement.remove());

@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import {
   ArrowRight, Award, Scale, CalendarCheck2, CheckCircle2,
   ClipboardPenLine, Heart, Image as ImageIcon, Mail,
-  MessageCircleMore, Monitor, Play, Send, Sparkles, TriangleAlert,
+  MessageCircleMore, Monitor, Play, Sparkles, TriangleAlert,
   UserRound, UsersRound, X,
 } from "lucide-react";
 
 const coral = "#ff5d64";
 const BASE_DESIGN_WIDTH = 724;
+const CONTACT_HREF = "mailto:contact@example.com";
 
 function Button({ children, variant = "primary", href = "#entry", onClick, className = "" }) {
   const base = "inline-flex whitespace-nowrap h-[34px] items-center justify-center gap-2 rounded-full px-6 text-[11px] font-bold tracking-[.03em] transition focus:outline-none focus:ring-2 focus:ring-[#ff5d64]/35";
@@ -45,7 +46,6 @@ function MiniBoard({ mode = "table" }) {
 
 function App() {
   const [demoOpen, setDemoOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(() => typeof window === "undefined" ? BASE_DESIGN_WIDTH : window.innerWidth);
   const issueCards = [
     { icon: CalendarCheck2, color: coral, title: "希望休と必要人数の\n両立が難しい", body: "希望を尊重しつつ、必要人数を満たすシフトを組むのが大変です。" },
@@ -82,8 +82,6 @@ function App() {
     { n: "04", title: "お試し利用", sub: "実際の現場で\nお試しください", icon: Monitor, color: "#438ed4" },
     { n: "05", title: "フィードバック", sub: "ご意見・ご感想を\nお聞かせください", icon: Sparkles, color: "#8e66d2" },
   ];
-
-  function handleSubmit(event) { event.preventDefault(); setSubmitted(true); }
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f6f6f4]">
@@ -207,25 +205,19 @@ function App() {
           </section>
 
           <section id="entry" className="px-[48px] pb-[10px] pt-[14px] max-sm:px-6">
-            <form onSubmit={handleSubmit} className="rounded-lg border border-[#dfe3e4] bg-white px-[20px] py-[13px] shadow-sm">
-              <h2 className="text-center text-[16px] font-black tracking-[.08em]">モニター応募フォーム</h2>
-              <div className="mt-3 space-y-2">
-                {[["お名前", "例）山田 太郎", "text"], ["施設・店舗名", "例）○○株式会社", "text"], ["メールアドレス", "例）yamada@example.com", "email"]].map(([label, placeholder, type]) => (
-                  <label key={label} className="grid grid-cols-[140px_1fr] items-center text-[8px] font-bold max-sm:grid-cols-1 max-sm:gap-1"><span>{label}<b className="ml-3 rounded-sm bg-[#ff686e] px-1 py-[2px] text-[6px] text-white">必須</b></span><input required type={type} placeholder={placeholder} className="h-[24px] rounded border border-[#dfe3e4] px-3 text-[8px] font-medium outline-none placeholder:text-[#a6adb0] focus:border-[#ff6c72]" /></label>
-                ))}
-                <label className="grid grid-cols-[140px_1fr] items-center text-[8px] font-bold max-sm:grid-cols-1 max-sm:gap-1"><span>現在のシフト作成の悩み<b className="ml-3 rounded-sm bg-[#ff686e] px-1 py-[2px] text-[6px] text-white">必須</b></span><input required placeholder="例）希望休との調整に時間がかかる、公平性に不安がある など" className="h-[24px] rounded border border-[#dfe3e4] px-3 text-[8px] font-medium outline-none placeholder:text-[#a6adb0] focus:border-[#ff6c72]" /></label>
-              </div>
-              <label className="mt-2 flex items-center justify-center gap-2 text-[8px]"><input required type="checkbox" className="accent-[#ff5d64]" /><a href="#privacy" className="font-semibold text-[#478ecb] underline">プライバシーポリシー</a>に同意する</label>
-              <button type="submit" className="mx-auto mt-2 flex h-[29px] w-[220px] items-center justify-center gap-2 rounded-full bg-[#ff5d64] text-[10px] font-black text-white shadow-[0_6px_16px_rgba(255,93,100,.2)] hover:bg-[#ef4e56]">応募する <Send size={12} /></button>
-              {submitted && <p className="mt-2 text-center text-[9px] font-bold text-[#32a977]">ありがとうございます。応募を受け付けました。</p>}
-            </form>
+            <section className="rounded-lg border border-[#eadfdd] bg-[#fffaf8] px-[20px] py-[18px] text-center shadow-sm">
+              <p className="text-[9px] font-black tracking-[.1em] text-[#ff5d64]">正式提供に向けて準備中</p>
+              <h2 className="mt-2 text-[16px] font-black tracking-[.08em]">モニターをご希望の方へ</h2>
+              <p className="mt-3 text-[10px] font-semibold leading-[1.75]">モニター募集は、お問い合わせから受け付けています。<br />ご希望やご質問を、お気軽にご連絡ください。</p>
+              <a href={CONTACT_HREF} className="mx-auto mt-4 flex h-[31px] w-[244px] items-center justify-center gap-2 rounded-full bg-[#ff5d64] text-[10px] font-black text-white shadow-[0_6px_16px_rgba(255,93,100,.2)] hover:bg-[#ef4e56]">モニターについて問い合わせる <ArrowRight size={13} /></a>
+            </section>
           </section>
         </main>
 
         <footer className="flex h-[48px] items-center px-[32px] pb-[5px] text-[7px] font-medium text-[#626a6e]"><span className="font-black text-[#252a2d]">シフトントン</span><button className="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]">お問い合わせ</button><div className="ml-auto flex gap-12"><a id="privacy" href="#privacy">プライバシーポリシー</a><a href="#terms">利用規約（仮）</a><span>© 2026 長岡LLPチーム・バブリーチ</span></div></footer>
       </div>
 
-      <div className="fixed inset-x-0 bottom-0 z-50 flex h-[43px] w-full items-center bg-[#ff5d64] px-[34px] text-white shadow-[0_-8px_20px_rgba(255,93,100,.2)] max-sm:px-3"><span className="whitespace-nowrap text-[13px] font-black tracking-[.09em] max-sm:text-[11px] max-sm:tracking-normal">モニターについてのお問い合わせ受付中</span><span className="ml-7 text-[10px] font-semibold max-sm:hidden">モニターをご希望の方は、お問い合わせからご連絡ください。</span><a href="mailto:contact@example.com" className="ml-auto flex h-[29px] w-[194px] items-center justify-center gap-8 rounded bg-white text-[10px] font-black text-[#ff5d64] max-sm:w-[185px] max-sm:gap-4">お問い合わせ <ArrowRight size={14} /></a><button aria-label="バナーを閉じる" className="ml-7 text-white/80 hover:text-white max-sm:ml-2" onClick={(e) => e.currentTarget.parentElement.remove()}><X size={15} /></button></div>
+      <div className="fixed inset-x-0 bottom-0 z-50 flex h-[43px] w-full items-center bg-[#ff5d64] px-[34px] text-white shadow-[0_-8px_20px_rgba(255,93,100,.2)] max-sm:px-3"><span className="whitespace-nowrap text-[13px] font-black tracking-[.09em] max-sm:text-[11px] max-sm:tracking-normal">モニターについてのお問い合わせ受付中</span><span className="ml-7 text-[10px] font-semibold max-sm:hidden">モニターをご希望の方は、お問い合わせからご連絡ください。</span><a href={CONTACT_HREF} className="ml-auto flex h-[29px] w-[194px] items-center justify-center gap-8 rounded bg-white text-[10px] font-black text-[#ff5d64] max-sm:w-[185px] max-sm:gap-4">お問い合わせ <ArrowRight size={14} /></a><button aria-label="バナーを閉じる" className="ml-7 text-white/80 hover:text-white max-sm:ml-2" onClick={(e) => e.currentTarget.parentElement.remove()}><X size={15} /></button></div>
 
       {demoOpen && (
         <div className="fixed inset-0 z-[70] grid place-items-center bg-black/60 p-6" onMouseDown={() => setDemoOpen(false)}>

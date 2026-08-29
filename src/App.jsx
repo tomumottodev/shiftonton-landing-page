@@ -94,7 +94,7 @@ function App() {
       >
       <div className="w-full overflow-hidden bg-white">
         <header className="relative z-40 flex h-[46px] items-center border-b border-[#eceeef] bg-white px-[24px]">
-          <a href="#top" className="text-[15px] font-black tracking-[.08em]">シフトパズル</a>
+          <a href="#top" className="text-[15px] font-black tracking-[.08em]">シフトントン</a>
           <nav className="ml-auto flex items-center gap-8 text-[9px] font-bold max-sm:hidden">
             <a href="#features" className="hover:text-[#ff5d64]">特徴</a><a href="#demo" className="hover:text-[#ff5d64]">デモ</a><a href="#entry" className="hover:text-[#ff5d64]">モニター募集</a><a href="#flow" className="hover:text-[#ff5d64]">導入の流れ</a>
           </nav>
@@ -106,7 +106,7 @@ function App() {
             <div className="z-10 flex flex-col justify-center bg-white px-[34px] py-7 max-sm:px-6">
               <h1 className="whitespace-nowrap text-[26px] font-black leading-tight tracking-[.05em] max-sm:text-[24px]">丸一日 <span className="mx-1">→</span> <span className="text-[#ff5d64]">納得の一枚</span></h1>
               <p className="mt-3 text-[13px] font-bold">シフト作成者の試行錯誤を支える伴走型AI</p>
-              <p className="mt-5 text-[10px] font-medium leading-[1.9] text-[#596165]">希望休、必要人数、公平感——<br />シフトは、さまざまな条件や思いの中で組み立てられます。<br />シフトパズルは、その迷いや試行錯誤に寄り添い、<br />納得できる「一枚」を一緒につくります。</p>
+              <p className="mt-5 text-[10px] font-medium leading-[1.9] text-[#596165]">希望休、必要人数、公平感——<br />シフトは、さまざまな条件や思いの中で組み立てられます。<br />シフトントンは、その迷いや試行錯誤に寄り添い、<br />納得できる「一枚」を一緒につくります。</p>
               <div className="mt-5 flex gap-3"><Button>モニターに応募する <ArrowRight size={13} /></Button><Button variant="outline" href="#demo">デモを見る</Button></div>
             </div>
             <div className="relative min-h-[272px] max-sm:h-[250px]">
@@ -146,7 +146,7 @@ function App() {
               <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-[63%] z-[2] w-[94px] bg-[linear-gradient(90deg,#579bd0_0%,rgba(87,155,208,.82)_38%,rgba(87,155,208,0)_100%)] backdrop-blur-[2px]" />
               <div className="relative z-10 max-w-[80%] px-[64px] pt-[28px] max-sm:max-w-[76%] max-sm:px-6">
                 <h2 className="text-[21px] font-bold tracking-[.06em]">自動作成ではなく、判断の過程を支える。</h2>
-                <p className="mt-3 text-[11px] font-bold tracking-[.07em]">シフトパズルは、シフト作成者の思考を支えるAIです。</p>
+                <p className="mt-3 text-[11px] font-bold tracking-[.07em]">シフトントンは、シフト作成者の思考を支えるAIです。</p>
                 <p className="mt-3 text-[10px] font-semibold leading-[1.85]">条件や思いを整理し、複数の案や根拠を提示。<br />納得できる一枚にたどり着くまで、伴走します。</p>
               </div>
             </div>
@@ -170,11 +170,11 @@ function App() {
               <button onClick={() => setDemoOpen(true)} className="group relative mt-2 block h-[135px] w-full overflow-hidden rounded-md focus:outline-none focus:ring-2 focus:ring-[#ff5d64]">
                 <PhotoPlaceholder label="シフト管理画面のデモ" className="absolute inset-0" compact />
                 <span className="absolute left-1/2 top-1/2 grid h-[47px] w-[47px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/90 shadow-lg transition group-hover:scale-105"><Play size={20} fill="#ff777d" color="#ff777d" /></span>
-              </button><p className="mt-2 text-[9px]">動画でわかるシフトパズルの使い方（約2分）</p>
+              </button><p className="mt-2 text-[9px]">動画でわかるシフトントンの使い方（約2分）</p>
             </article>
             <article className="rounded-lg border border-[#eadfdd] bg-[#fffaf8] p-[14px_24px] shadow-sm">
               <h2 className="text-center text-[16px] font-black">モニター募集中</h2>
-              <p className="mt-2 text-[10px] font-semibold leading-[1.7]">シフトパズルを実際の現場で試し、<br />一緒により良いプロダクトに育てていきませんか？</p>
+              <p className="mt-2 text-[10px] font-semibold leading-[1.7]">シフトントンを実際の現場で試し、<br />一緒により良いプロダクトに育てていきませんか？</p>
               <ul className="mt-3 space-y-1 text-[10px] font-bold">{["無料でお試し利用", "オンラインサポート", "アンケートにご協力"].map((item) => <li key={item} className="flex items-center gap-2"><CheckCircle2 size={14} fill="#43bd87" color="#43bd87" />{item}</li>)}</ul>
               <Button className="mt-4 w-full">応募フォームへ進む <ArrowRight size={13} /></Button>
             </article>
@@ -197,7 +197,7 @@ function App() {
             <h2 className="text-center text-[15px] font-black tracking-[.14em]">取り組み・実績</h2>
             <div className="mt-3 flex h-[90px] items-center rounded-lg border border-[#e0e3e4] bg-white px-6 shadow-sm">
               <Award size={62} color="#d09b22" strokeWidth={1.25} className="shrink-0" />
-              <div className="ml-7 border-l border-[#eceeef] pl-7"><h3 className="text-[15px] font-black">LEAN LAUNCHPAD 受賞実績</h3><p className="mt-1 text-[9px] font-semibold leading-[1.65]">シフトパズルは、現場の課題に寄り添い、<br />持続可能な価値づくりに取り組んでいます。</p></div>
+              <div className="ml-7 border-l border-[#eceeef] pl-7"><h3 className="text-[15px] font-black">LEAN LAUNCHPAD 受賞実績</h3><p className="mt-1 text-[9px] font-semibold leading-[1.65]">シフトントンは、現場の課題に寄り添い、<br />持続可能な価値づくりに取り組んでいます。</p></div>
             </div>
           </section>
 
@@ -222,14 +222,14 @@ function App() {
           </section>
         </main>
 
-        <footer className="flex h-[48px] items-center px-[32px] pb-[5px] text-[7px] font-medium text-[#626a6e]"><span className="font-black text-[#252a2d]">シフトパズル</span><button className="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]">お問い合わせ</button><div className="ml-auto flex gap-12"><a id="privacy" href="#privacy">プライバシーポリシー</a><a href="#terms">利用規約</a><span>© 2024 Shift Puzzle Inc.</span></div></footer>
+        <footer className="flex h-[48px] items-center px-[32px] pb-[5px] text-[7px] font-medium text-[#626a6e]"><span className="font-black text-[#252a2d]">シフトントン</span><button className="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]">お問い合わせ</button><div className="ml-auto flex gap-12"><a id="privacy" href="#privacy">プライバシーポリシー</a><a href="#terms">利用規約</a><span>© 2024 Shift Puzzle Inc.</span></div></footer>
       </div>
 
       <div className="relative z-50 flex h-[43px] w-full items-center bg-[#ff5d64] px-[34px] text-white shadow-[0_-8px_20px_rgba(255,93,100,.2)] max-sm:px-3"><span className="whitespace-nowrap text-[13px] font-black tracking-[.09em] max-sm:text-[11px] max-sm:tracking-normal">モニター募集中</span><span className="ml-7 text-[10px] font-semibold max-sm:hidden">現場でお試しいただける方を募集しています。</span><a href="#entry" className="ml-auto flex h-[29px] w-[194px] items-center justify-center gap-8 rounded bg-white text-[10px] font-black text-[#ff5d64] max-sm:w-[185px] max-sm:gap-4">モニターに応募する <ArrowRight size={14} /></a><button aria-label="バナーを閉じる" className="ml-7 text-white/80 hover:text-white max-sm:ml-2" onClick={(e) => e.currentTarget.parentElement.remove()}><X size={15} /></button></div>
 
       {demoOpen && (
         <div className="fixed inset-0 z-[70] grid place-items-center bg-black/60 p-6" onMouseDown={() => setDemoOpen(false)}>
-          <div className="w-full max-w-[620px] rounded-xl bg-white p-4 shadow-2xl" onMouseDown={(e) => e.stopPropagation()}><div className="flex items-center justify-between"><h2 className="text-base font-black">シフトパズル デモ</h2><button aria-label="閉じる" onClick={() => setDemoOpen(false)}><X /></button></div><PhotoPlaceholder label="デモ動画" className="mt-4 aspect-video rounded-lg" /><p className="mt-3 text-sm text-[#596165]">実際の画面では、希望条件の整理から複数案の比較までをご覧いただけます。</p></div>
+          <div className="w-full max-w-[620px] rounded-xl bg-white p-4 shadow-2xl" onMouseDown={(e) => e.stopPropagation()}><div className="flex items-center justify-between"><h2 className="text-base font-black">シフトントン デモ</h2><button aria-label="閉じる" onClick={() => setDemoOpen(false)}><X /></button></div><PhotoPlaceholder label="デモ動画" className="mt-4 aspect-video rounded-lg" /><p className="mt-3 text-sm text-[#596165]">実際の画面では、希望条件の整理から複数案の比較までをご覧いただけます。</p></div>
         </div>
       )}
       </div>

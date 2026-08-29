@@ -885,6 +885,9 @@
   .bg-\[linear-gradient\(180deg\,\#fff_0\%\,rgba\(255\,255\,255\,\.62\)_42\%\,rgba\(255\,255\,255\,0\)_100\%\)\] {
     background-image: linear-gradient(#fff, #ffffff9e 42%, #fff0);
   }
+  .object-contain {
+    object-fit: contain;
+  }
   .object-cover {
     object-fit: cover;
   }

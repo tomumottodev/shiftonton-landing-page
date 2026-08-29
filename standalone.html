@@ -897,6 +897,9 @@
         .bg-\[linear-gradient\(180deg\,\#fff_0\%\,rgba\(255\,255\,255\,\.62\)_42\%\,rgba\(255\,255\,255\,0\)_100\%\)\] {
           background-image: linear-gradient(#fff, #ffffff9e 42%, #fff0);
         }
+        .object-contain {
+          object-fit: contain;
+        }
         .object-cover {
           object-fit: cover;
         }
@@ -1793,7 +1796,7 @@
     />
     <div class="min-h-screen overflow-x-hidden bg-[#f6f6f4]">
       <div
-        class="min-h-screen bg-[#f6f6f4] pb-[43px] text-[#252a2d]"
+        class="min-h-screen bg-[#f6f6f4] text-[#252a2d]"
         data-layout-scale="1.0000"
         style="width: 100%; zoom: 1"
       >
@@ -1805,12 +1808,12 @@
             <nav class="ml-auto flex items-center gap-8 text-[9px] font-bold max-sm:hidden">
               <a href="#features" class="hover:text-[#ff5d64]">特徴</a
               ><a href="#demo" class="hover:text-[#ff5d64]">デモ</a
-              ><a href="mailto:contact@example.com" class="hover:text-[#ff5d64]">お問い合わせ</a
+              ><a href="mailto:bublys@googlegroups.com" class="hover:text-[#ff5d64]">お問い合わせ</a
               ><a href="#flow" class="hover:text-[#ff5d64]">導入の流れ</a>
             </nav>
             <a
               class="inline-flex whitespace-nowrap h-[34px] items-center justify-center gap-2 rounded-full px-6 text-[11px] font-bold tracking-[.03em] transition focus:outline-none focus:ring-2 focus:ring-[#ff5d64]/35 bg-[#ff5d64] text-white shadow-[0_8px_18px_rgba(255,93,100,.2)] hover:bg-[#ef4e56] ml-9 h-[28px] px-5 text-[9px] max-sm:ml-auto"
-              href="mailto:contact@example.com"
+              href="mailto:bublys@googlegroups.com"
               >お問い合わせ</a
             >
           </header>
@@ -1830,7 +1833,7 @@
                 <div class="mt-5 flex gap-3">
                   <a
                     class="inline-flex whitespace-nowrap h-[34px] items-center justify-center gap-2 rounded-full px-6 text-[11px] font-bold tracking-[.03em] transition focus:outline-none focus:ring-2 focus:ring-[#ff5d64]/35 bg-[#ff5d64] text-white shadow-[0_8px_18px_rgba(255,93,100,.2)] hover:bg-[#ef4e56]"
-                    href="mailto:contact@example.com"
+                    href="mailto:bublys@googlegroups.com"
                     >モニターについて問い合わせる
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2221,30 +2224,13 @@
                   >
                     条件や希望を整理し、視覚的にわかりやすくします。
                   </p>
-                  <div
-                    role="img"
-                    aria-label="シフト一覧画面の画像プレースホルダー"
-                    class="flex overflow-hidden bg-[#e9edef] text-[#879195] h-[102px] rounded border border-[#e6e8e9]"
-                  >
-                    <div class="m-auto flex flex-col items-center gap-1 text-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-image"
-                        aria-hidden="true"
-                      >
-                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-                        <circle cx="9" cy="9" r="2"></circle>
-                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg
-                      ><span class="text-[8px] font-semibold tracking-[.12em]">IMAGE</span>
-                    </div>
+                  <div class="h-[102px] overflow-hidden rounded border border-[#e6e8e9] bg-white">
+                    <img
+                      src="/assets/shift-early-selection.png"
+                      alt="スタッフの早番選択を見える化した図"
+                      loading="lazy"
+                      class="h-full w-full object-contain"
+                    />
                   </div>
                 </article>
                 <article
@@ -2258,30 +2244,13 @@
                   >
                     複数パターンを比較・提案し、 判断の材料を増やします。
                   </p>
-                  <div
-                    role="img"
-                    aria-label="複数パターン比較画面の画像プレースホルダー"
-                    class="flex overflow-hidden bg-[#e9edef] text-[#879195] h-[102px] rounded border border-[#e6e8e9]"
-                  >
-                    <div class="m-auto flex flex-col items-center gap-1 text-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-image"
-                        aria-hidden="true"
-                      >
-                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-                        <circle cx="9" cy="9" r="2"></circle>
-                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg
-                      ><span class="text-[8px] font-semibold tracking-[.12em]">IMAGE</span>
-                    </div>
+                  <div class="h-[102px] overflow-hidden rounded border border-[#e6e8e9] bg-white">
+                    <img
+                      src="/assets/ai-shift-options.png"
+                      alt="AIが複数のシフト案を提案する図"
+                      loading="lazy"
+                      class="h-full w-full object-contain"
+                    />
                   </div>
                 </article>
                 <article
@@ -2295,30 +2264,13 @@
                   >
                     変更の履歴や理由を残せるから、 試行錯誤がスムーズになります。
                   </p>
-                  <div
-                    role="img"
-                    aria-label="変更履歴画面の画像プレースホルダー"
-                    class="flex overflow-hidden bg-[#e9edef] text-[#879195] h-[102px] rounded border border-[#e6e8e9]"
-                  >
-                    <div class="m-auto flex flex-col items-center gap-1 text-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-image"
-                        aria-hidden="true"
-                      >
-                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-                        <circle cx="9" cy="9" r="2"></circle>
-                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg
-                      ><span class="text-[8px] font-semibold tracking-[.12em]">IMAGE</span>
-                    </div>
+                  <div class="h-[102px] overflow-hidden rounded border border-[#e6e8e9] bg-white">
+                    <img
+                      src="/assets/shift-decision-history.png"
+                      alt="シフト案の検討過程と履歴を示す図"
+                      loading="lazy"
+                      class="h-full w-full object-contain"
+                    />
                   </div>
                 </article>
               </div>
@@ -2331,55 +2283,24 @@
                 class="rounded-lg border border-[#e4e7e8] bg-[#fbfbfb] p-[14px] text-center shadow-sm"
               >
                 <h2 class="text-[16px] font-black">デモで流れを見る</h2>
-                <button
-                  class="group relative mt-2 block h-[135px] w-full overflow-hidden rounded-md focus:outline-none focus:ring-2 focus:ring-[#ff5d64]"
-                >
-                  <div
-                    role="img"
-                    aria-label="シフト管理画面のデモの画像プレースホルダー"
-                    class="flex overflow-hidden bg-[#e9edef] text-[#879195] absolute inset-0"
-                  >
-                    <div class="m-auto flex flex-col items-center gap-1 text-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-image"
-                        aria-hidden="true"
-                      >
-                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-                        <circle cx="9" cy="9" r="2"></circle>
-                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg
-                      ><span class="text-[8px] font-semibold tracking-[.12em]">IMAGE</span>
-                    </div>
-                  </div>
-                  <span
-                    class="absolute left-1/2 top-1/2 grid h-[47px] w-[47px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/90 shadow-lg transition group-hover:scale-105"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="#ff777d"
-                      stroke="#ff777d"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-play"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
-                      ></path></svg
-                  ></span>
-                </button>
-                <p class="mt-2 text-[9px]">動画でわかるシフトントンの使い方（約2分）</p>
+                <div class="mt-2 h-[135px] overflow-hidden rounded-md bg-black">
+                  <iframe
+                    class="h-full w-full"
+                    src="https://www.youtube-nocookie.com/embed/LayUs3PBvx0"
+                    title="シフトントン デモ動画"
+                    allow="
+                      accelerometer;
+                      autoplay;
+                      clipboard-write;
+                      encrypted-media;
+                      gyroscope;
+                      picture-in-picture;
+                      web-share;
+                    "
+                    allowfullscreen=""
+                  ></iframe>
+                </div>
+                <p class="mt-2 text-[9px]">動画でわかるシフトントンの使い方</p>
               </article>
               <article
                 class="rounded-lg border border-[#eadfdd] bg-[#fffaf8] p-[14px_24px] shadow-sm"
@@ -2446,7 +2367,7 @@
                 </ul>
                 <a
                   class="inline-flex whitespace-nowrap h-[34px] items-center justify-center gap-2 rounded-full px-6 text-[11px] font-bold tracking-[.03em] transition focus:outline-none focus:ring-2 focus:ring-[#ff5d64]/35 bg-[#ff5d64] text-white shadow-[0_8px_18px_rgba(255,93,100,.2)] hover:bg-[#ef4e56] mt-4 w-full"
-                  href="mailto:contact@example.com"
+                  href="mailto:bublys@googlegroups.com"
                   >モニターについて問い合わせる
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -2759,7 +2680,7 @@
                 </p>
                 <a
                   class="inline-flex whitespace-nowrap h-[34px] items-center justify-center gap-2 rounded-full px-6 text-[11px] font-bold tracking-[.03em] transition focus:outline-none focus:ring-2 focus:ring-[#ff5d64]/35 bg-[#ff5d64] text-white shadow-[0_8px_18px_rgba(255,93,100,.2)] hover:bg-[#ef4e56] mt-4 w-[194px]"
-                  href="mailto:contact@example.com"
+                  href="mailto:bublys@googlegroups.com"
                   >モニターについて問い合わせる
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -2778,32 +2699,12 @@
                     <path d="m12 5 7 7-7 7"></path></svg
                 ></a>
               </div>
-              <div
-                role="img"
-                aria-label="導入を支援するスタッフの画像プレースホルダー"
-                class="flex overflow-hidden bg-[#e9edef] text-[#879195] min-h-[160px]"
-              >
-                <div class="m-auto flex flex-col items-center gap-1 text-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-image"
-                    aria-hidden="true"
-                  >
-                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-                    <circle cx="9" cy="9" r="2"></circle>
-                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg
-                  ><span class="text-[9px] font-semibold tracking-[.12em]">IMAGE</span
-                  ><span class="text-[9px]">導入を支援するスタッフ</span>
-                </div>
-              </div>
+              <img
+                src="/assets/team-support.png"
+                alt="ノートパソコンを見ながら相談する二人"
+                loading="lazy"
+                class="h-full min-h-[160px] w-full object-cover object-center"
+              />
             </section>
             <section id="entry" class="px-[48px] pb-[10px] pt-[14px] max-sm:px-6">
               <section
@@ -2817,7 +2718,7 @@
                   モニター募集は、お問い合わせから受け付けています。<br />ご希望やご質問を、お気軽にご連絡ください。
                 </p>
                 <a
-                  href="mailto:contact@example.com"
+                  href="mailto:bublys@googlegroups.com"
                   class="mx-auto mt-4 flex h-[31px] w-[244px] items-center justify-center gap-2 rounded-full bg-[#ff5d64] text-[10px] font-black text-white shadow-[0_6px_16px_rgba(255,93,100,.2)] hover:bg-[#ef4e56]"
                   >モニターについて問い合わせる
                   <svg
@@ -2844,7 +2745,7 @@
           >
             <span class="font-black text-[#252a2d]">シフトントン</span
             ><a
-              href="mailto:contact@example.com"
+              href="mailto:bublys@googlegroups.com"
               class="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]"
               >お問い合わせ</a
             >
@@ -2853,55 +2754,6 @@
               ><a href="#terms">利用規約（仮）</a><span>© 2026 長岡LLPチーム・バブリーチ</span>
             </div>
           </footer>
-        </div>
-        <div
-          class="fixed inset-x-0 bottom-0 z-50 flex h-[43px] w-full items-center bg-[#ff5d64] px-[34px] text-white shadow-[0_-8px_20px_rgba(255,93,100,.2)] max-sm:px-3"
-        >
-          <span
-            class="whitespace-nowrap text-[13px] font-black tracking-[.09em] max-sm:text-[11px] max-sm:tracking-normal"
-            >モニターについてのお問い合わせ受付中</span
-          ><span class="ml-7 text-[10px] font-semibold max-sm:hidden"
-            >モニターをご希望の方は、お問い合わせからご連絡ください。</span
-          ><a
-            href="mailto:contact@example.com"
-            class="ml-auto flex h-[29px] w-[194px] items-center justify-center gap-8 rounded bg-white text-[10px] font-black text-[#ff5d64] max-sm:w-[185px] max-sm:gap-4"
-            >お問い合わせ
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path></svg></a
-          ><button
-            aria-label="バナーを閉じる"
-            class="ml-7 text-white/80 hover:text-white max-sm:ml-2"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-x"
-              aria-hidden="true"
-            >
-              <path d="M18 6 6 18"></path>
-              <path d="m6 6 12 12"></path>
-            </svg>
-          </button>
         </div>
       </div>
     </div>

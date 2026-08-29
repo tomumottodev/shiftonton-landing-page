@@ -49,7 +49,7 @@ function App() {
   const [viewportWidth, setViewportWidth] = useState(() => typeof window === "undefined" ? BASE_DESIGN_WIDTH : window.innerWidth);
   const issueCards = [
     { icon: CalendarCheck2, color: coral, title: "希望休と必要人数の\n両立が難しい", body: "希望を尊重しつつ、必要人数を満たすシフトを組むのが大変です。" },
-    { icon: Scale, color: "#f8a51b", title: "公平に考えたいのに、\n判断が偏ってしまう", body: "見えないバイアスが入り、誰かに負担が偏っていないか不安です。" },
+    { icon: Scale, color: "#f8a51b", title: "公平に考えたいのに、\n判断が偏ってしまう", body: "公平に組んでいるつもりだけど、スタッフの不満が溜まっていないか心配です。" },
     { icon: UserRound, color: "#49bd8c", title: "毎回、ひとりで\n悩み続けてしまう", body: "最終判断は自分。いつも時間と精神的コストがかかっています。" },
   ];
 
@@ -71,9 +71,9 @@ function App() {
   const scale = viewportWidth > BASE_DESIGN_WIDTH ? viewportWidth / BASE_DESIGN_WIDTH : 1;
   const scaledLayout = viewportWidth > BASE_DESIGN_WIDTH;
   const mechanisms = [
-    { n: "01", title: "見える化", body: "条件や希望を整理し、\n全体をひと目で把握できます。", mode: "table" },
-    { n: "02", title: "AI伴走", body: "複数パターンを比較・提案し、\n判断の材料を増やします。", mode: "compare" },
-    { n: "03", title: "履歴保存", body: "変更の履歴や理由を残せるから、\n振り返りも安心です。", mode: "history" },
+    { n: "01", title: "見える化", body: "条件や希望を整理し、視覚的にわかりやすくします。\n", mode: "table" },
+    { n: "02", title: "伴走AI", body: "複数パターンを比較・提案し、\n判断の材料を増やします。", mode: "compare" },
+    { n: "03", title: "すべての履歴", body: "変更の履歴や理由を残せるから、\n試行錯誤がスムーズになります。", mode: "history" },
   ];
   const steps = [
     { n: "01", title: "応募", sub: "フォームから\nご応募ください", icon: ClipboardPenLine, color: coral },
@@ -104,7 +104,7 @@ function App() {
         <main id="top">
           <section className="grid min-h-[272px] grid-cols-[47%_53%] max-sm:grid-cols-1">
             <div className="z-10 flex flex-col justify-center bg-white px-[34px] py-7 max-sm:px-6">
-              <h1 className="whitespace-nowrap text-[26px] font-black leading-tight tracking-[.05em] max-sm:text-[24px]">丸一日 <span className="mx-1">→</span> <span className="text-[#ff5d64]">納得の一枚</span></h1>
+              <h1 className="whitespace-nowrap text-[26px] font-black leading-tight tracking-[.05em] max-sm:text-[24px]">試行錯誤の一日 <span className="mx-1">→</span> <span className="text-[#ff5d64]">納得の一枚</span></h1>
               <p className="mt-3 text-[13px] font-bold">シフト作成者の試行錯誤を支える伴走型AI</p>
               <p className="mt-5 text-[10px] font-medium leading-[1.9] text-[#596165]">希望休、必要人数、公平感——<br />シフトは、さまざまな条件や思いの中で組み立てられます。<br />シフトントンは、その迷いや試行錯誤に寄り添い、<br />納得できる「一枚」を一緒につくります。</p>
               <div className="mt-5 flex gap-3"><Button>モニターに応募する <ArrowRight size={13} /></Button><Button variant="outline" href="#demo">デモを見る</Button></div>
@@ -123,7 +123,7 @@ function App() {
 
           <section id="features" className="px-[22px] py-[17px]">
             <div className="grid h-[61px] grid-cols-4 rounded-lg border border-[#e0e3e4] bg-white shadow-sm max-sm:h-auto max-sm:grid-cols-2 max-sm:gap-y-5 max-sm:p-5">
-              <Feature icon={CalendarCheck2} color={coral}>希望休も。</Feature><Feature icon={UsersRound} color="#f4a51b">必要人数も。</Feature><Feature icon={Heart} color="#49bd8c">スタッフへの配慮も。</Feature><Feature icon={Scale} color="#c9903d">シフト作成には、<br />答えが一つではありません。</Feature>
+              <Feature icon={CalendarCheck2} color={coral}>希望休も。</Feature><Feature icon={UsersRound} color="#f4a51b">必要人数も。</Feature><Feature icon={Heart} color="#49bd8c">スタッフへの配慮も。</Feature><Feature icon={Scale} color="#c9903d">シフト作成の答えは<br />一つではありません。</Feature>
             </div>
           </section>
 
@@ -147,7 +147,7 @@ function App() {
               <div className="relative z-10 max-w-[80%] px-[64px] pt-[28px] max-sm:max-w-[76%] max-sm:px-6">
                 <h2 className="text-[21px] font-bold tracking-[.06em]">自動作成ではなく、判断の過程を支える。</h2>
                 <p className="mt-3 text-[11px] font-bold tracking-[.07em]">シフトントンは、シフト作成者の思考を支えるAIです。</p>
-                <p className="mt-3 text-[10px] font-semibold leading-[1.85]">条件や思いを整理し、複数の案や根拠を提示。<br />納得できる一枚にたどり着くまで、伴走します。</p>
+                <p className="mt-3 text-[10px] font-semibold leading-[1.85]">条件や思いを整理し、複数案や根拠を提示。<br />納得できる一枚にたどり着くまで、伴走します。</p>
               </div>
             </div>
           </section>
@@ -210,7 +210,7 @@ function App() {
             <form onSubmit={handleSubmit} className="rounded-lg border border-[#dfe3e4] bg-white px-[20px] py-[13px] shadow-sm">
               <h2 className="text-center text-[16px] font-black tracking-[.08em]">モニター応募フォーム</h2>
               <div className="mt-3 space-y-2">
-                {[["お名前", "例）山田 太郎", "text"], ["施設・店舗名", "例）○○クリニック", "text"], ["メールアドレス", "例）yamada@example.com", "email"]].map(([label, placeholder, type]) => (
+                {[["お名前", "例）山田 太郎", "text"], ["施設・店舗名", "例）○○株式会社", "text"], ["メールアドレス", "例）yamada@example.com", "email"]].map(([label, placeholder, type]) => (
                   <label key={label} className="grid grid-cols-[140px_1fr] items-center text-[8px] font-bold max-sm:grid-cols-1 max-sm:gap-1"><span>{label}<b className="ml-3 rounded-sm bg-[#ff686e] px-1 py-[2px] text-[6px] text-white">必須</b></span><input required type={type} placeholder={placeholder} className="h-[24px] rounded border border-[#dfe3e4] px-3 text-[8px] font-medium outline-none placeholder:text-[#a6adb0] focus:border-[#ff6c72]" /></label>
                 ))}
                 <label className="grid grid-cols-[140px_1fr] items-center text-[8px] font-bold max-sm:grid-cols-1 max-sm:gap-1"><span>現在のシフト作成の悩み<b className="ml-3 rounded-sm bg-[#ff686e] px-1 py-[2px] text-[6px] text-white">必須</b></span><input required placeholder="例）希望休との調整に時間がかかる、公平性に不安がある など" className="h-[24px] rounded border border-[#dfe3e4] px-3 text-[8px] font-medium outline-none placeholder:text-[#a6adb0] focus:border-[#ff6c72]" /></label>

@@ -40,8 +40,27 @@ function Feature({ icon: Icon, color, children }) {
 }
 
 function MiniBoard({ mode = "table" }) {
-  const labels = { table: "シフト一覧画面", compare: "複数パターン比較画面", history: "変更履歴画面" };
-  return <PhotoPlaceholder label={labels[mode]} className="h-[102px] rounded border border-[#e6e8e9]" compact />;
+  const boards = {
+    table: {
+      src: "/assets/shift-early-selection.png",
+      alt: "スタッフの早番選択を見える化した図",
+    },
+    compare: {
+      src: "/assets/ai-shift-options.png",
+      alt: "AIが複数のシフト案を提案する図",
+    },
+    history: {
+      src: "/assets/shift-decision-history.png",
+      alt: "シフト案の検討過程と履歴を示す図",
+    },
+  };
+  const board = boards[mode];
+
+  return (
+    <div className="h-[102px] overflow-hidden rounded border border-[#e6e8e9] bg-white">
+      <img src={board.src} alt={board.alt} loading="lazy" className="h-full w-full object-contain" />
+    </div>
+  );
 }
 
 function App() {
@@ -201,7 +220,7 @@ function App() {
 
           <section className="grid min-h-[160px] grid-cols-[54%_46%] bg-[#f3f1ed] max-sm:grid-cols-1">
             <div className="flex flex-col justify-center px-[48px] max-sm:px-6 max-sm:py-8"><h2 className="text-[20px] font-black tracking-[.08em]">シフト作成を、ひとりで抱え込まない。</h2><p className="mt-3 text-[10px] font-semibold leading-[1.8]">私たちは、あなたの悩みや思いに寄り添い、<br />納得できる「一枚」を一緒につくるパートナーです。</p><Button href={CONTACT_HREF} className="mt-4 w-[194px]">モニターについて問い合わせる <ArrowRight size={13} /></Button></div>
-            <PhotoPlaceholder label="導入を支援するスタッフ" className="min-h-[160px]" />
+            <img src="/assets/team-support.png" alt="ノートパソコンを見ながら相談する二人" loading="lazy" className="h-full min-h-[160px] w-full object-cover object-center" />
           </section>
 
           <section id="entry" className="px-[48px] pb-[10px] pt-[14px] max-sm:px-6">

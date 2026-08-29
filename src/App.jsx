@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import {
   ArrowRight, Award, Scale, CalendarCheck2, CheckCircle2,
   Heart, Image as ImageIcon, Mail,
-  MessageCircleMore, Monitor, Play, Sparkles, TriangleAlert,
-  UserRound, UsersRound, X,
+  MessageCircleMore, Monitor, Sparkles, TriangleAlert,
+  UserRound, UsersRound,
 } from "lucide-react";
 
 const coral = "#ff5d64";
 const BASE_DESIGN_WIDTH = 724;
-const CONTACT_HREF = "mailto:contact@example.com";
+const CONTACT_HREF = "mailto:bublys@googlegroups.com";
 
 function Button({ children, variant = "primary", href = "#entry", onClick, className = "" }) {
   const base = "inline-flex whitespace-nowrap h-[34px] items-center justify-center gap-2 rounded-full px-6 text-[11px] font-bold tracking-[.03em] transition focus:outline-none focus:ring-2 focus:ring-[#ff5d64]/35";
@@ -64,7 +64,6 @@ function MiniBoard({ mode = "table" }) {
 }
 
 function App() {
-  const [demoOpen, setDemoOpen] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(() => typeof window === "undefined" ? BASE_DESIGN_WIDTH : window.innerWidth);
   const issueCards = [
     { icon: CalendarCheck2, color: coral, title: "希望休と必要人数の\n両立が難しい", body: "希望を尊重しつつ、必要人数を満たすシフトを組むのが大変です。" },
@@ -105,7 +104,7 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f6f6f4]">
       <div
-        className="min-h-screen bg-[#f6f6f4] pb-[43px] text-[#252a2d]"
+        className="min-h-screen bg-[#f6f6f4] text-[#252a2d]"
         data-layout-scale={scale.toFixed(4)}
         style={{ width: scaledLayout ? `${BASE_DESIGN_WIDTH}px` : "100%", zoom: scale }}
       >
@@ -184,10 +183,16 @@ function App() {
           <section id="demo" className="grid grid-cols-2 gap-5 px-[34px] pb-[17px] max-sm:grid-cols-1 max-sm:px-6">
             <article className="rounded-lg border border-[#e4e7e8] bg-[#fbfbfb] p-[14px] text-center shadow-sm">
               <h2 className="text-[16px] font-black">デモで流れを見る</h2>
-              <button onClick={() => setDemoOpen(true)} className="group relative mt-2 block h-[135px] w-full overflow-hidden rounded-md focus:outline-none focus:ring-2 focus:ring-[#ff5d64]">
-                <PhotoPlaceholder label="シフト管理画面のデモ" className="absolute inset-0" compact />
-                <span className="absolute left-1/2 top-1/2 grid h-[47px] w-[47px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/90 shadow-lg transition group-hover:scale-105"><Play size={20} fill="#ff777d" color="#ff777d" /></span>
-              </button><p className="mt-2 text-[9px]">動画でわかるシフトントンの使い方（約2分）</p>
+              <div className="mt-2 h-[135px] overflow-hidden rounded-md bg-black">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube-nocookie.com/embed/LayUs3PBvx0"
+                  title="シフトントン デモ動画"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <p className="mt-2 text-[9px]">動画でわかるシフトントンの使い方</p>
             </article>
             <article className="rounded-lg border border-[#eadfdd] bg-[#fffaf8] p-[14px_24px] shadow-sm">
               <h2 className="text-center text-[16px] font-black">モニター募集中</h2>
@@ -236,13 +241,6 @@ function App() {
         <footer className="flex h-[48px] items-center px-[32px] pb-[5px] text-[7px] font-medium text-[#626a6e]"><span className="font-black text-[#252a2d]">シフトントン</span><a href={CONTACT_HREF} className="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]">お問い合わせ</a><div className="ml-auto flex gap-12"><a id="privacy" href="#privacy">プライバシーポリシー</a><a href="#terms">利用規約（仮）</a><span>© 2026 長岡LLPチーム・バブリーチ</span></div></footer>
       </div>
 
-      <div className="fixed inset-x-0 bottom-0 z-50 flex h-[43px] w-full items-center bg-[#ff5d64] px-[34px] text-white shadow-[0_-8px_20px_rgba(255,93,100,.2)] max-sm:px-3"><span className="whitespace-nowrap text-[13px] font-black tracking-[.09em] max-sm:text-[11px] max-sm:tracking-normal">モニターについてのお問い合わせ受付中</span><span className="ml-7 text-[10px] font-semibold max-sm:hidden">モニターをご希望の方は、お問い合わせからご連絡ください。</span><a href={CONTACT_HREF} className="ml-auto flex h-[29px] w-[194px] items-center justify-center gap-8 rounded bg-white text-[10px] font-black text-[#ff5d64] max-sm:w-[185px] max-sm:gap-4">お問い合わせ <ArrowRight size={14} /></a><button aria-label="バナーを閉じる" className="ml-7 text-white/80 hover:text-white max-sm:ml-2" onClick={(e) => e.currentTarget.parentElement.remove()}><X size={15} /></button></div>
-
-      {demoOpen && (
-        <div className="fixed inset-0 z-[70] grid place-items-center bg-black/60 p-6" onMouseDown={() => setDemoOpen(false)}>
-          <div className="w-full max-w-[620px] rounded-xl bg-white p-4 shadow-2xl" onMouseDown={(e) => e.stopPropagation()}><div className="flex items-center justify-between"><h2 className="text-base font-black">シフトントン デモ</h2><button aria-label="閉じる" onClick={() => setDemoOpen(false)}><X /></button></div><PhotoPlaceholder label="デモ動画" className="mt-4 aspect-video rounded-lg" /><p className="mt-3 text-sm text-[#596165]">実際の画面では、希望条件の整理から複数案の比較までをご覧いただけます。</p></div>
-        </div>
-      )}
       </div>
     </div>
   );

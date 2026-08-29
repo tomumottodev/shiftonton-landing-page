@@ -88,7 +88,7 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f6f6f4]">
       <div
-        className="min-h-screen bg-[#f6f6f4] text-[#252a2d]"
+        className="min-h-screen bg-[#f6f6f4] pb-[43px] text-[#252a2d]"
         data-layout-scale={scale.toFixed(4)}
         style={{ width: scaledLayout ? `${BASE_DESIGN_WIDTH}px` : "100%", zoom: scale }}
       >
@@ -222,10 +222,10 @@ function App() {
           </section>
         </main>
 
-        <footer className="flex h-[48px] items-center px-[32px] pb-[5px] text-[7px] font-medium text-[#626a6e]"><span className="font-black text-[#252a2d]">シフトントン</span><button className="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]">お問い合わせ</button><div className="ml-auto flex gap-12"><a id="privacy" href="#privacy">プライバシーポリシー</a><a href="#terms">利用規約</a><span>© 2024 Shift Puzzle Inc.</span></div></footer>
+        <footer className="flex h-[48px] items-center px-[32px] pb-[5px] text-[7px] font-medium text-[#626a6e]"><span className="font-black text-[#252a2d]">シフトントン</span><button className="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]">お問い合わせ</button><div className="ml-auto flex gap-12"><a id="privacy" href="#privacy">プライバシーポリシー</a><a href="#terms">利用規約（仮）</a><span>© 2026 長岡LLPチーム・バブリーチ</span></div></footer>
       </div>
 
-      <div className="relative z-50 flex h-[43px] w-full items-center bg-[#ff5d64] px-[34px] text-white shadow-[0_-8px_20px_rgba(255,93,100,.2)] max-sm:px-3"><span className="whitespace-nowrap text-[13px] font-black tracking-[.09em] max-sm:text-[11px] max-sm:tracking-normal">モニター募集中</span><span className="ml-7 text-[10px] font-semibold max-sm:hidden">現場でお試しいただける方を募集しています。</span><a href="#entry" className="ml-auto flex h-[29px] w-[194px] items-center justify-center gap-8 rounded bg-white text-[10px] font-black text-[#ff5d64] max-sm:w-[185px] max-sm:gap-4">モニターに応募する <ArrowRight size={14} /></a><button aria-label="バナーを閉じる" className="ml-7 text-white/80 hover:text-white max-sm:ml-2" onClick={(e) => e.currentTarget.parentElement.remove()}><X size={15} /></button></div>
+      <div className="fixed inset-x-0 bottom-0 z-50 flex h-[43px] w-full items-center bg-[#ff5d64] px-[34px] text-white shadow-[0_-8px_20px_rgba(255,93,100,.2)] max-sm:px-3"><span className="whitespace-nowrap text-[13px] font-black tracking-[.09em] max-sm:text-[11px] max-sm:tracking-normal">モニターについてのお問い合わせ受付中</span><span className="ml-7 text-[10px] font-semibold max-sm:hidden">モニターをご希望の方は、お問い合わせからご連絡ください。</span><a href="mailto:contact@example.com" className="ml-auto flex h-[29px] w-[194px] items-center justify-center gap-8 rounded bg-white text-[10px] font-black text-[#ff5d64] max-sm:w-[185px] max-sm:gap-4">お問い合わせ <ArrowRight size={14} /></a><button aria-label="バナーを閉じる" className="ml-7 text-white/80 hover:text-white max-sm:ml-2" onClick={(e) => e.currentTarget.parentElement.remove()}><X size={15} /></button></div>
 
       {demoOpen && (
         <div className="fixed inset-0 z-[70] grid place-items-center bg-black/60 p-6" onMouseDown={() => setDemoOpen(false)}>

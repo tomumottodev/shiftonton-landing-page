@@ -11,4 +11,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 ## Prototype decisions
 
 - Keep the red bottom banner fixed on screen. It may be closed by the visitor; its CTA opens the contact email.
-- Replace the application form with a preparation notice and contact CTA. Monitor applications remain accepted through contact email; other monitor-application UI remains unchanged until a later phase.
+- Replace the application form with a preparation notice and contact CTA. Monitor applications remain accepted through contact email, and all monitor-related CTAs link to that contact channel.

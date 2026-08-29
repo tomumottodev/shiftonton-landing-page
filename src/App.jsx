@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   ArrowRight, Award, Scale, CalendarCheck2, CheckCircle2,
-  ClipboardPenLine, Heart, Image as ImageIcon, Mail,
+  Heart, Image as ImageIcon, Mail,
   MessageCircleMore, Monitor, Play, Sparkles, TriangleAlert,
   UserRound, UsersRound, X,
 } from "lucide-react";
@@ -76,7 +76,7 @@ function App() {
     { n: "03", title: "すべての履歴", body: "変更の履歴や理由を残せるから、\n試行錯誤がスムーズになります。", mode: "history" },
   ];
   const steps = [
-    { n: "01", title: "応募", sub: "フォームから\nご応募ください", icon: ClipboardPenLine, color: coral },
+    { n: "01", title: "お問い合わせ", sub: "メールから\nご連絡ください", icon: Mail, color: coral },
     { n: "02", title: "ヒアリング", sub: "課題や現状を\nお伺いします", icon: MessageCircleMore, color: "#f4a51b" },
     { n: "03", title: "ご案内", sub: "お試し方法を\nご案内します", icon: Mail, color: "#49bd8c" },
     { n: "04", title: "お試し利用", sub: "実際の現場で\nお試しください", icon: Monitor, color: "#438ed4" },
@@ -94,9 +94,9 @@ function App() {
         <header className="relative z-40 flex h-[46px] items-center border-b border-[#eceeef] bg-white px-[24px]">
           <a href="#top" className="text-[15px] font-black tracking-[.08em]">シフトントン</a>
           <nav className="ml-auto flex items-center gap-8 text-[9px] font-bold max-sm:hidden">
-            <a href="#features" className="hover:text-[#ff5d64]">特徴</a><a href="#demo" className="hover:text-[#ff5d64]">デモ</a><a href="#entry" className="hover:text-[#ff5d64]">モニター募集</a><a href="#flow" className="hover:text-[#ff5d64]">導入の流れ</a>
+            <a href="#features" className="hover:text-[#ff5d64]">特徴</a><a href="#demo" className="hover:text-[#ff5d64]">デモ</a><a href={CONTACT_HREF} className="hover:text-[#ff5d64]">お問い合わせ</a><a href="#flow" className="hover:text-[#ff5d64]">導入の流れ</a>
           </nav>
-          <Button className="ml-9 h-[28px] px-5 text-[9px] max-sm:ml-auto">モニターに応募する</Button>
+          <Button href={CONTACT_HREF} className="ml-9 h-[28px] px-5 text-[9px] max-sm:ml-auto">お問い合わせ</Button>
         </header>
 
         <main id="top">
@@ -105,7 +105,7 @@ function App() {
               <h1 className="whitespace-nowrap text-[26px] font-black leading-tight tracking-[.05em] max-sm:text-[24px]">試行錯誤の一日 <span className="mx-1">→</span> <span className="text-[#ff5d64]">納得の一枚</span></h1>
               <p className="mt-3 text-[13px] font-bold">シフト作成者の試行錯誤を支える伴走型AI</p>
               <p className="mt-5 text-[10px] font-medium leading-[1.9] text-[#596165]">希望休、必要人数、公平感——<br />シフトは、さまざまな条件や思いの中で組み立てられます。<br />シフトントンは、その迷いや試行錯誤に寄り添い、<br />納得できる「一枚」を一緒につくります。</p>
-              <div className="mt-5 flex gap-3"><Button>モニターに応募する <ArrowRight size={13} /></Button><Button variant="outline" href="#demo">デモを見る</Button></div>
+              <div className="mt-5 flex gap-3"><Button href={CONTACT_HREF}>モニターについて問い合わせる <ArrowRight size={13} /></Button><Button variant="outline" href="#demo">デモを見る</Button></div>
             </div>
             <div className="relative min-h-[272px] max-sm:h-[250px]">
               <img src="/assets/hero-shift-planning.png" alt="明るいオフィスでシフト作成に取り組む女性" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-center" />
@@ -174,7 +174,7 @@ function App() {
               <h2 className="text-center text-[16px] font-black">モニター募集中</h2>
               <p className="mt-2 text-[10px] font-semibold leading-[1.7]">シフトントンを実際の現場で試し、<br />一緒により良いプロダクトに育てていきませんか？</p>
               <ul className="mt-3 space-y-1 text-[10px] font-bold">{["無料でお試し利用", "オンラインサポート", "アンケートにご協力"].map((item) => <li key={item} className="flex items-center gap-2"><CheckCircle2 size={14} fill="#43bd87" color="#43bd87" />{item}</li>)}</ul>
-              <Button className="mt-4 w-full">応募フォームへ進む <ArrowRight size={13} /></Button>
+              <Button href={CONTACT_HREF} className="mt-4 w-full">モニターについて問い合わせる <ArrowRight size={13} /></Button>
             </article>
           </section>
 
@@ -200,7 +200,7 @@ function App() {
           </section>
 
           <section className="grid min-h-[160px] grid-cols-[54%_46%] bg-[#f3f1ed] max-sm:grid-cols-1">
-            <div className="flex flex-col justify-center px-[48px] max-sm:px-6 max-sm:py-8"><h2 className="text-[20px] font-black tracking-[.08em]">シフト作成を、ひとりで抱え込まない。</h2><p className="mt-3 text-[10px] font-semibold leading-[1.8]">私たちは、あなたの悩みや思いに寄り添い、<br />納得できる「一枚」を一緒につくるパートナーです。</p><Button className="mt-4 w-[194px]">モニターに応募する <ArrowRight size={13} /></Button></div>
+            <div className="flex flex-col justify-center px-[48px] max-sm:px-6 max-sm:py-8"><h2 className="text-[20px] font-black tracking-[.08em]">シフト作成を、ひとりで抱え込まない。</h2><p className="mt-3 text-[10px] font-semibold leading-[1.8]">私たちは、あなたの悩みや思いに寄り添い、<br />納得できる「一枚」を一緒につくるパートナーです。</p><Button href={CONTACT_HREF} className="mt-4 w-[194px]">モニターについて問い合わせる <ArrowRight size={13} /></Button></div>
             <PhotoPlaceholder label="導入を支援するスタッフ" className="min-h-[160px]" />
           </section>
 
@@ -214,7 +214,7 @@ function App() {
           </section>
         </main>
 
-        <footer className="flex h-[48px] items-center px-[32px] pb-[5px] text-[7px] font-medium text-[#626a6e]"><span className="font-black text-[#252a2d]">シフトントン</span><button className="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]">お問い合わせ</button><div className="ml-auto flex gap-12"><a id="privacy" href="#privacy">プライバシーポリシー</a><a href="#terms">利用規約（仮）</a><span>© 2026 長岡LLPチーム・バブリーチ</span></div></footer>
+        <footer className="flex h-[48px] items-center px-[32px] pb-[5px] text-[7px] font-medium text-[#626a6e]"><span className="font-black text-[#252a2d]">シフトントン</span><a href={CONTACT_HREF} className="ml-8 rounded border border-[#cfd4d6] px-3 py-1 text-[6px]">お問い合わせ</a><div className="ml-auto flex gap-12"><a id="privacy" href="#privacy">プライバシーポリシー</a><a href="#terms">利用規約（仮）</a><span>© 2026 長岡LLPチーム・バブリーチ</span></div></footer>
       </div>
 
       <div className="fixed inset-x-0 bottom-0 z-50 flex h-[43px] w-full items-center bg-[#ff5d64] px-[34px] text-white shadow-[0_-8px_20px_rgba(255,93,100,.2)] max-sm:px-3"><span className="whitespace-nowrap text-[13px] font-black tracking-[.09em] max-sm:text-[11px] max-sm:tracking-normal">モニターについてのお問い合わせ受付中</span><span className="ml-7 text-[10px] font-semibold max-sm:hidden">モニターをご希望の方は、お問い合わせからご連絡ください。</span><a href={CONTACT_HREF} className="ml-auto flex h-[29px] w-[194px] items-center justify-center gap-8 rounded bg-white text-[10px] font-black text-[#ff5d64] max-sm:w-[185px] max-sm:gap-4">お問い合わせ <ArrowRight size={14} /></a><button aria-label="バナーを閉じる" className="ml-7 text-white/80 hover:text-white max-sm:ml-2" onClick={(e) => e.currentTarget.parentElement.remove()}><X size={15} /></button></div>
